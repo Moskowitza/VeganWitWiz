@@ -1,11 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Vegan With Wiz`,
+    description: `Thoughtful reviews of vegan cheese steaks`,
+    author: `Aaron Moskowitz`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts/`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
