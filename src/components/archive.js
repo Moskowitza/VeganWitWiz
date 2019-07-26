@@ -1,6 +1,23 @@
 import React from "react"
-import { StaticQuery, Link } from "gatsby"
-import POST_ARCHIVE_QUERY from "./queries"
+import { StaticQuery, Link, graphql } from "gatsby"
+
+const POST_ARCHIVE_QUERY = graphql`
+  query BlogArchive {
+    allMarkdownRemark(
+      limit: 5
+      sort: { order: DESC, fields: frontmatter___date }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            slug
+            title
+          }
+        }
+      }
+    }
+  }
+`
 
 export default () => (
   <StaticQuery
