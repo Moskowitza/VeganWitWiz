@@ -1,5 +1,5 @@
 ---
-slug: "/blackbird1"
+slug: "blackbird1"
 title: "First Black Bird review"
 date: "2019-07-25"
 ---

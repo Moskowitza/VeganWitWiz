@@ -3,8 +3,10 @@ module.exports = {
     title: `Vegan With Wiz`,
     description: `Thoughtful reviews of vegan cheese steaks`,
     author: `Aaron Moskowitz`,
+    siteUrl: `https://veganwitwiz.com`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,
     {

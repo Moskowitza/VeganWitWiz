@@ -1,5 +1,5 @@
 ---
-slug: "/hipcity1"
+slug: "hipcity1"
 title: "First Hip City review"
 date: "2019-07-25"
 ---
