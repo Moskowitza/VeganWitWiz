@@ -6,11 +6,10 @@ import styled from "styled-components"
 
 const HeaderWrapper = styled.div`
   background: darkcyan;
-  margin-bottom: 2rem;
+
   padding: 2rem;
 `
 const HeaderContainer = styled.div`
-  margin-bottom: 2rem;
   max-width: 960px;
 `
 

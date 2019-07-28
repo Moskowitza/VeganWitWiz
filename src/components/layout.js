@@ -6,11 +6,11 @@ import Img from "gatsby-image"
 import { useSpring, animated } from "react-spring"
 import Header from "./header"
 import Archive from "./archive"
-// import "./layout.css"
+import "./layout.css"
 
 const MainWrapper = styled.div`
   max-width: 90%;
-  margin: 0 auto;
+  margin: 0;
   display: grid;
   grid-template-columns: 1fr 4fr;
 `
@@ -58,8 +58,11 @@ const Layout = ({ children, location }) => {
         <main>{children}</main>
       </MainWrapper>
       <footer>
-        © {new Date().getFullYear()}, Built with
-                {` `}
+        © 
+{' '}
+{new Date().getFullYear()}
+, Built with
+{` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
       </footer>
     </>

@@ -3,6 +3,8 @@ import { StaticQuery, Link, graphql } from "gatsby"
 import styled from "styled-components"
 
 const ArchiveWrapper = styled.div`
+  padding: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
   background: black;
@@ -20,6 +22,9 @@ const ArchiveList = styled.ul`
 `
 const ArchiveListText = styled.span`
   color: white;
+  &:hover {
+    background: palevioletred;
+  }
 `
 
 const POST_ARCHIVE_QUERY = graphql`
@@ -40,7 +45,7 @@ const POST_ARCHIVE_QUERY = graphql`
   }
 `
 
-export default (({location})) => (
+export default ({ location }) => (
   <StaticQuery
     query={POST_ARCHIVE_QUERY}
     render={({ allMarkdownRemark }) => (
