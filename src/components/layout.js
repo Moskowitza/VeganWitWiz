@@ -16,6 +16,7 @@ const MainWrapper = styled.div`
 `
 
 const Layout = ({ children, location }) => {
+  const { pathname } = location
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -23,7 +24,7 @@ const Layout = ({ children, location }) => {
           title
         }
       }
-      file(relativePath: { regex: "/images/bbCS" }) {
+      file(relativePath: { eq: "bbCS.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             src
@@ -34,8 +35,8 @@ const Layout = ({ children, location }) => {
     }
   `)
   const spring = useSpring({
-    to: { height: location.pathname === "/" ? 200 : 100 },
-    from: { height: location.pathname === "/" ? 100 : 200 },
+    to: { height: pathname === "/" ? 200 : 100 },
+    from: { height: pathname === "/" ? 100 : 200 },
   })
 
   return (
@@ -57,11 +58,8 @@ const Layout = ({ children, location }) => {
         <main>{children}</main>
       </MainWrapper>
       <footer>
-        © 
-{' '}
-{new Date().getFullYear()}
-, Built with
-{` `}
+        © {new Date().getFullYear()}, Built with
+                {` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
       </footer>
     </>

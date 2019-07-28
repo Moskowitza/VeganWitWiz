@@ -40,7 +40,7 @@ const POST_ARCHIVE_QUERY = graphql`
   }
 `
 
-export default () => (
+export default (({location})) => (
   <StaticQuery
     query={POST_ARCHIVE_QUERY}
     render={({ allMarkdownRemark }) => (

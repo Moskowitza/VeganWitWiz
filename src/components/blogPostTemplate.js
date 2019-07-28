@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "./layout"
 
 const blogPostTemplate = ({ data, location }) => {
@@ -7,6 +8,7 @@ const blogPostTemplate = ({ data, location }) => {
   return (
     <Layout location={location}>
       <h1>{markdownRemark.frontmatter.title}</h1>
+      <Img fluid={markdownRemark.frontmatter.hero.childImageSharp.fluid} />
       <div
         dangerouslySetInnerHTML={{
           __html: markdownRemark.html,
