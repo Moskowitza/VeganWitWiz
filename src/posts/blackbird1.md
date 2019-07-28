@@ -2,6 +2,7 @@
 slug: "blackbird1"
 title: "First Black Bird review"
 date: "2019-07-25"
+hero: "../images/bbCS.png"
 ---
 
 # Black Bird Pizzaria

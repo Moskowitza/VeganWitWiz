@@ -2,10 +2,10 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "./layout"
 
-const blogPostTemplate = ({ data }) => {
+const blogPostTemplate = ({ data, location }) => {
   const { markdownRemark } = data
   return (
-    <Layout>
+    <Layout location={location}>
       <h1>{markdownRemark.frontmatter.title}</h1>
       <div
         dangerouslySetInnerHTML={{
@@ -25,6 +25,13 @@ export const query = graphql`
         date
         slug
         title
+        hero {
+          childImageSharp {
+            fluid(maxWidth: 980) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

@@ -1,5 +1,26 @@
 import React from "react"
 import { StaticQuery, Link, graphql } from "gatsby"
+import styled from "styled-components"
+
+const ArchiveWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  background: black;
+  color: white;
+  width: 300px;
+  @media only screen and (max-width: 600px) {
+    background-color: lightblue;
+  }
+`
+const ArchiveList = styled.ul`
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: white;
+`
+const ArchiveListText = styled.span`
+  color: white;
+`
 
 const POST_ARCHIVE_QUERY = graphql`
   query BlogArchive {
@@ -23,20 +44,23 @@ export default () => (
   <StaticQuery
     query={POST_ARCHIVE_QUERY}
     render={({ allMarkdownRemark }) => (
-      <>
+      <ArchiveWrapper>
         <aside>
           <h3>Archive</h3>
-          <ul>
+          <ArchiveList>
             {allMarkdownRemark.edges.map(edge => (
               <li key={edge.node.frontmatter.slug}>
                 <Link to={`posts/${edge.node.frontmatter.slug}`}>
-                  {edge.node.frontmatter.title}
+                  <ArchiveListText>
+                    {" "}
+                    {edge.node.frontmatter.title}
+                  </ArchiveListText>
                 </Link>
               </li>
             ))}
-          </ul>
+          </ArchiveList>
         </aside>
-      </>
+      </ArchiveWrapper>
     )}
   />
 )

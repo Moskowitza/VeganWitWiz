@@ -1,21 +1,22 @@
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
+
 import PropTypes from "prop-types"
 import React from "react"
+import styled from "styled-components"
+
+const HeaderWrapper = styled.div`
+  background: darkcyan;
+  margin-bottom: 2rem;
+  padding: 2rem;
+`
+const HeaderContainer = styled.div`
+  margin-bottom: 2rem;
+  max-width: 960px;
+`
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
+  <HeaderWrapper>
+    <HeaderContainer>
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
@@ -27,8 +28,8 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-    </div>
-  </header>
+    </HeaderContainer>
+  </HeaderWrapper>
 )
 
 Header.propTypes = {

@@ -2,6 +2,7 @@
 slug: "hipcity1"
 title: "First Hip City review"
 date: "2019-07-25"
+hero: "../images/bbCS2.png"
 ---
 
 # Hip City Veg

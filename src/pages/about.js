@@ -5,8 +5,8 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-const About = () => (
-  <Layout>
+const About = ({ location }) => (
+  <Layout location={location}>
     <SEO title="Home" />
     <h1>Hi people</h1>
     <p>Welcome to Vegan Wit Wiz.</p>
