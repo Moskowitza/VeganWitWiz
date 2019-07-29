@@ -12,8 +12,6 @@ const IndexPage = ({ location }) => (
     <SEO title="Home" />
     <Listing />
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
-    <Link to="/page-2/">Go to page 2</Link>
-    <Link to="/about">abouts</Link>
   </Layout>
 )
 

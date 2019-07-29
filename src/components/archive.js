@@ -10,7 +10,7 @@ const ArchiveWrapper = styled.div`
   flex-direction: column;
   background: black;
   color: white;
-  width: 300px;
+
   @media only screen and (max-width: 600px) {
     background-color: lightblue;
   }

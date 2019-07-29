@@ -12,15 +12,27 @@ import "./layout.css"
 
 const MainWrapper = styled.div`
   margin: 0;
+  width: 100vw;
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 25% auto auto 500px 25%;
+  grid-template-rows: auto 5% auto auto auto;
   grid-template-areas:
     "header header header header"
     "topNav topNav topNav topNav"
     "hero hero hero hero"
     "sidebar main main main"
     "footer footer footer footer";
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+      "header "
+      "topNav"
+      "sidebar"
+      "main"
+      "footer";
+  }
 `
 const Layout = ({ children, location }) => {
   const { pathname } = location

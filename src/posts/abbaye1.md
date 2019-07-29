@@ -1,11 +1,11 @@
 ---
-slug: "hipcity1"
-title: "Hip City Veg"
+slug: "abbaye"
+title: "The Abbaye"
 date: "2019-07-25"
-hero: "../images/bbCS2.png"
+hero: "../images/bbCS3.png"
 ---
 
-# Hip City Veg
+# The Abbaye
 
 Lorem ipsum dolor amet chartreuse lo-fi tofu kickstarter hammock gentrify. Health goth pop-up keytar authentic meh narwhal. Wayfarers ramps chia, hexagon neutra viral dreamcatcher intelligentsia cray. Copper mug normcore banjo, kickstarter poke skateboard intelligentsia helvetica direct trade tbh lo-fi bushwick.
 
