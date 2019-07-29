@@ -11,9 +11,8 @@ const About = ({ location }) => (
     <p>Welcome to Vegan Wit Wiz.</p>
     <p>
       Vegan With Wiz is a sweet blog about vegan cheese steaks in Philadlephia.
+      <Link to="/"> Home</Link>
     </p>
-
-    <Link to="/">Home</Link>
   </Layout>
 )
 

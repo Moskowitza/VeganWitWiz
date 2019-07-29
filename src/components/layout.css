@@ -1,4 +1,8 @@
-html {
+html body {
+  margin: 0;
+}
+
+/* html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -649,4 +653,4 @@ pre tt:after {
 }
 .star-rating__star.is-disabled:hover {
   cursor: default;
-}
+} */

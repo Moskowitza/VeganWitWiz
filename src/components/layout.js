@@ -5,16 +5,23 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { useSpring, animated } from "react-spring"
 import Header from "./header"
+import Footer from "./footer"
+import TopNav from "./topNav"
 import Archive from "./archive"
 import "./layout.css"
 
 const MainWrapper = styled.div`
-  max-width: 90%;
   margin: 0;
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 25% auto auto 500px 25%;
+  grid-template-areas:
+    "header header header header"
+    "topNav topNav topNav topNav"
+    "hero hero hero hero"
+    "sidebar main main main"
+    "footer footer footer footer";
 `
-
 const Layout = ({ children, location }) => {
   const { pathname } = location
   const data = useStaticQuery(graphql`
@@ -41,30 +48,21 @@ const Layout = ({ children, location }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-
-      {
-        <animated.div style={{ overflow: "hidden", ...spring }}>
-          <Img fluid={data.file.childImageSharp.fluid} />
-        </animated.div>
-      }
-
-      {/* {location.pathname === "/" && (
-        <Img fluid={data.file.childImageSharp.fluid} />
-      )} */}
-
       <MainWrapper>
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <TopNav />
+        {location.pathname === "/" && (
+          <animated.div
+            style={{ gridArea: "hero", overflow: "hidden", ...spring }}
+          >
+            <Img fluid={data.file.childImageSharp.fluid} />
+          </animated.div>
+        )}
+
         <Archive />
-        <main>{children}</main>
+        <main style={{ gridArea: "main" }}>{children}</main>
+        <Footer />
       </MainWrapper>
-      <footer>
-        © 
-{' '}
-{new Date().getFullYear()}
-, Built with
-{` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
     </>
   )
 }

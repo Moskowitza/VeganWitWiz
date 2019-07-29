@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 const TopNavStyle = styled.nav`
+  grid-area: topNav;
   display: flex;
   background: darkgrey;
   justify-content: flex-end;

@@ -5,8 +5,8 @@ import React from "react"
 import styled from "styled-components"
 
 const HeaderWrapper = styled.div`
+  grid-area: header;
   background: darkcyan;
-
   padding: 2rem;
 `
 const HeaderContainer = styled.div`

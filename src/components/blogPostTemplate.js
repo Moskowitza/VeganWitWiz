@@ -1,19 +1,25 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import styled from "styled-components"
 import Layout from "./layout"
 
+const BlogTemplate = styled.main`
+  grid-area: main;
+`
 const blogPostTemplate = ({ data, location }) => {
   const { markdownRemark } = data
   return (
     <Layout location={location}>
-      <h1>{markdownRemark.frontmatter.title}</h1>
-      <Img fluid={markdownRemark.frontmatter.hero.childImageSharp.fluid} />
-      <div
-        dangerouslySetInnerHTML={{
-          __html: markdownRemark.html,
-        }}
-      />
+      <BlogTemplate>
+        <h1>{markdownRemark.frontmatter.title}</h1>
+        <Img fluid={markdownRemark.frontmatter.hero.childImageSharp.fluid} />
+        <div
+          dangerouslySetInnerHTML={{
+            __html: markdownRemark.html,
+          }}
+        />
+      </BlogTemplate>
     </Layout>
   )
 }

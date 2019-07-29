@@ -3,8 +3,9 @@ import { StaticQuery, Link, graphql } from "gatsby"
 import styled from "styled-components"
 
 const ArchiveWrapper = styled.div`
+  grid-area: sidebar;
   padding: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Alfa Slab One", cursive;
   display: flex;
   flex-direction: column;
   background: black;
