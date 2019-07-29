@@ -16,7 +16,7 @@ const MainWrapper = styled.div`
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto 5% auto auto auto;
+  grid-template-rows: 1fr 1fr min-content 1fr 1fr;
   grid-template-areas:
     "header header header header"
     "topNav topNav topNav topNav"

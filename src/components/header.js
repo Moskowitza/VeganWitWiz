@@ -8,6 +8,12 @@ const HeaderWrapper = styled.div`
   grid-area: header;
   background: darkcyan;
   padding: 2rem;
+  h1 {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    width: 100%; /*Add this*/
+  }
   a {
     color: pink;
     text-decoration: none;
@@ -16,7 +22,7 @@ const HeaderWrapper = styled.div`
 
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
-    <h1 style={{ margin: 0 }}>
+    <h1>
       <Link to="/">{siteTitle}</Link>
     </h1>
   </HeaderWrapper>
