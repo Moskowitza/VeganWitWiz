@@ -15,7 +15,12 @@ const About = ({ location }) => (
       Vegan With Wiz is a sweet blog about vegan cheese steaks in Philadlephia.
     </p>
     <Link to="/"> Home</Link>
-    <BioCard name="aaron" description="A real cool dude." image={aaronsFace}>
+    <BioCard
+      name="Aaron"
+      role="Webmaster & Eater"
+      description="I'm a fullstack developer and love working with React and Node and mentoring new developers. When I'm not sampling Philadephia vegan cheese steaks I'm rock-climbing or spending time with my family. Other hobbies include: eating vegan cheese steaks, writing about vegan cheese steaks, photographing vegan cheese steaks, and collecting data on vegan cheese steaks."
+      image={aaronsFace}
+    >
       {/* <AaronImage /> */}
     </BioCard>
   </Layout>
