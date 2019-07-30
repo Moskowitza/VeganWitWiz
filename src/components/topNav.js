@@ -4,12 +4,14 @@ import styled from "styled-components"
 
 const TopNavStyle = styled.nav`
   grid-area: topNav;
+  border-top: solid 2px black;
   display: flex;
-  padding-right: 1rem;
+  padding: 1rem;
   background: darkgrey;
   justify-content: flex-end;
   a {
-    font-family: Arial, Helvetica, sans-serif;
+    size: 18 px;
+    font-family: "Alfa Slab One", cursive;
     text-decoration: none;
     padding: 0.4rem;
   }
@@ -17,12 +19,15 @@ const TopNavStyle = styled.nav`
     background: pink;
     border-radius: 5px;
   }
+  @media only screen and (max-width: 600px) {
+    justify-content: center;
+  }
 `
 
 const TopNav = () => (
   <TopNavStyle>
-    <Link to="/page-2/">Go to page 2</Link>
-    <Link to="/about">abouts</Link>
+    <Link to="/page-2/">Shop</Link>
+    <Link to="/about">About Us</Link>
   </TopNavStyle>
 )
 

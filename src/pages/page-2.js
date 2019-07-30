@@ -11,15 +11,11 @@ const SecondPage = ({ location }) => (
   <Layout location={location}>
     <SEO title="shop" />
     <h1>Hi, Our shop will be coming soon.</h1>
-    <StarRating rating={2} />
-    <SaveForm />
-    <Toggle>
-      <p>
-        Welcome Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Inventore sapiente iusto soluta quod blanditiis ut harum praesentium.
-        Reiciendis, rerum repellat.
-      </p>
-    </Toggle>
+    <p>
+      We&apos;ll be posting some items to our shop very soon. In the meantime
+      keep up to date with this blog and follow us on instagram.
+    </p>
+
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 )

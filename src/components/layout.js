@@ -16,7 +16,7 @@ const MainWrapper = styled.div`
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr min-content 1fr 1fr;
+  grid-template-rows: 1fr auto min-content 1fr 1fr;
   grid-template-areas:
     "header header header header"
     "topNav topNav topNav topNav"
@@ -25,7 +25,7 @@ const MainWrapper = styled.div`
     "footer footer footer footer";
   @media only screen and (max-width: 600px) {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: 1fr auto min-content 1fr 1fr;
     grid-template-areas:
       "header "
       "topNav"
@@ -72,7 +72,7 @@ const Layout = ({ children, location }) => {
         )}
 
         <Archive />
-        <main style={{ gridArea: "main" }}>{children}</main>
+        <main style={{ gridArea: "main", margin: "1rem" }}>{children}</main>
         <Footer />
       </MainWrapper>
     </>

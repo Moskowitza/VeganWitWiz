@@ -6,7 +6,14 @@ import styled from "styled-components"
 const FooterArea = styled.footer`
   grid-area: footer;
   background: darkblue;
+
   color: white;
+  a {
+    color: white;
+  }
+  a:hover {
+    color: yellow;
+  }
 `
 
 const Footer = () => (
