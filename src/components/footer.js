@@ -5,21 +5,33 @@ import styled from "styled-components"
 
 const FooterArea = styled.footer`
   grid-area: footer;
-  background: darkblue;
-
-  color: white;
+  background: #ba70fa;
+  min-height: 100px;
+  color: #eceddc;
+  font-size: 20px;
+  span {
+    color: #eceddc;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    width: 100%; /*Add this*/
+  }
   a {
-    color: white;
+    color: #eceddc;
   }
   a:hover {
-    color: yellow;
+    color: darkgoldenrod;
+    background-color: darkgrey;
+    border-radius: 4px;
   }
 `
 
 const Footer = () => (
   <FooterArea>
-    {`© ${new Date().getFullYear()},`} Built with    {" "}
-    <a href="https://www.gatsbyjs.org">Gatsby</a>
+    <span>
+      {`© ${new Date().getFullYear()},  Built with `}
+      <a href="https://www.gatsbyjs.org">Gatsby</a>
+    </span>
   </FooterArea>
 )
 

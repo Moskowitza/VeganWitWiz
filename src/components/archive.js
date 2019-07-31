@@ -9,10 +9,13 @@ const ArchiveWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background-image: radial-gradient(#eceddc, #f2c6c2);
-  color: #eceddc;
+  color: #ba70fa;
 
   @media only screen and (max-width: 600px) {
     background-image: radial-gradient(#f2c6c2, #eceddc);
+    text-align: center;
+    display: inline-block;
+    position: relative;
   }
 `
 const ArchiveList = styled.ul`
@@ -22,7 +25,9 @@ const ArchiveList = styled.ul`
   color: white;
 `
 const ArchiveListText = styled.span`
-  color: #eceddc;
+  font-family: "Shadows Into Light Two", cursive;
+  color: #ba70fa;
+  font-size: 20px;
   &:hover {
     background: palevioletred;
   }

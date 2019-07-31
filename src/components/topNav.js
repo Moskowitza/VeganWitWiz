@@ -11,6 +11,7 @@ const TopNavStyle = styled.nav`
   justify-content: flex-end;
   a {
     size: 18 px;
+    color: #ba70fa;
     font-family: "Alfa Slab One", cursive;
     text-decoration: none;
     padding: 0.4rem;

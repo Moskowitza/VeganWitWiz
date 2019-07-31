@@ -30,10 +30,22 @@ const HeaderWrapper = styled.div`
   }
   a {
     color: #eceddc;
+    font-family: "Shadows Into Light Two", cursive;
     text-decoration: none;
   }
   a:hover {
     color: lightblue;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 2px;
+    h1 {
+      font-size: 50px;
+      margin: 0;
+    }
+    p {
+      margin: 0;
+      font-size: 16px;
+    }
   }
 `
 
