@@ -3,7 +3,7 @@ module.exports = {
     title: `Vegan With Wiz`,
     description: `Thoughtful reviews of vegan cheese steaks`,
     author: `Aaron Moskowitz`,
-    siteUrl: `https://veganwitwiz.com`,
+    siteUrl: `https://veganwitwiz.netlify.com/`,
   },
   plugins: [
     `gatsby-plugin-sitemap`,
@@ -60,6 +60,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-netlify`, // ! netlify goes LAST!!!
     // this (optional) plugin enables Progressive Web App + Offline functionality
