@@ -8,7 +8,7 @@ public_folder: /img
 collections:
   - name: "team"
     label: "Team"
-    foler: "src/team"
+    folder: "src/team"
     create: true
     slug: "{{slug}}"
     fields:
