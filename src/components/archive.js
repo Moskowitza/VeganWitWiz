@@ -8,11 +8,11 @@ const ArchiveWrapper = styled.div`
   font-family: "Alfa Slab One", cursive;
   display: flex;
   flex-direction: column;
-  background: black;
-  color: white;
+  background-image: radial-gradient(#eceddc, #f2c6c2);
+  color: #eceddc;
 
   @media only screen and (max-width: 600px) {
-    background-color: lightblue;
+    background-image: radial-gradient(#f2c6c2, #eceddc);
   }
 `
 const ArchiveList = styled.ul`
@@ -22,7 +22,7 @@ const ArchiveList = styled.ul`
   color: white;
 `
 const ArchiveListText = styled.span`
-  color: white;
+  color: #eceddc;
   &:hover {
     background: palevioletred;
   }

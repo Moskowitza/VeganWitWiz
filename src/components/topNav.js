@@ -7,7 +7,7 @@ const TopNavStyle = styled.nav`
   border-top: solid 2px black;
   display: flex;
   padding: 1rem;
-  background: darkgrey;
+  background: #eceddc;
   justify-content: flex-end;
   a {
     size: 18 px;

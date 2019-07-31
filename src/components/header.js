@@ -5,18 +5,31 @@ import styled from "styled-components"
 
 const HeaderWrapper = styled.div`
   grid-area: header;
-  background: darkcyan;
-  font-family: "Alfa Slab One", cursive;
+
+  background: #36c;
+  background: linear-gradient(135deg, #eceddc 25%, transparent 25%) -20px 0,
+    linear-gradient(225deg, #eceddc 25%, transparent 25%) -20px 0,
+    linear-gradient(315deg, #eceddc 25%, transparent 25%),
+    linear-gradient(45deg, #eceddc 25%, transparent 25%);
+  background-size: 40px 40px;
+  background-color: #f2c6c2;
   padding: 2rem;
+  h1 {
+    font-family: "Shadows Into Light Two", cursive;
+    font-size: 80px;
+    text-shadow: 2px 2px 4px #000000;
+  }
   h1,
   p {
+    font-size: 20 px;
+    font-family: "Alfa Slab One", cursive;
     text-align: center;
     display: inline-block;
     position: relative;
     width: 100%; /*Add this*/
   }
   a {
-    color: white;
+    color: #eceddc;
     text-decoration: none;
   }
   a:hover {

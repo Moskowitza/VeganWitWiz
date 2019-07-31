@@ -16,11 +16,11 @@ const MainWrapper = styled.div`
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr auto min-content 1fr 1fr;
+  grid-template-rows: 2fr auto min-content 1fr 1fr;
   grid-template-areas:
     "header header header header"
     "topNav topNav topNav topNav"
-    "hero hero hero hero"
+    "sidebar hero hero hero"
     "sidebar main main main"
     "footer footer footer footer";
   @media only screen and (max-width: 600px) {
