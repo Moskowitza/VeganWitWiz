@@ -14,3 +14,14 @@ collections:
     fields:
       - { label: "Team Member", name: "title", widget: "string" }
       - { label: "Bio", name: "bio", widget: "markdown" }
+  - name: "posts"
+    label: "Team"
+    folder: "src/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "date" }
+      - { label: "Hero Image", name: "hero", widget: "img" }
+      - { label: "Article", name: "post", widget: "markdown" }
