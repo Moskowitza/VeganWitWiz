@@ -23,5 +23,5 @@ collections:
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "date" }
-      - { label: "Hero Image", name: "hero", widget: "img" }
-      - { label: "Article", name: "post", widget: "markdown" }
+      - { label: "Hero Image", name: "hero", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
