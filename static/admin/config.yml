@@ -15,7 +15,7 @@ collections:
       - { label: "Team Member", name: "title", widget: "string" }
       - { label: "Bio", name: "bio", widget: "markdown" }
   - name: "posts"
-    label: "Team"
+    label: "Posts"
     folder: "src/posts"
     create: true
     slug: "{{slug}}"
