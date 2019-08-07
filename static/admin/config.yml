@@ -21,6 +21,7 @@ collections:
     create: true
     delete: false
     extension: "md"
+    format: "frontmatter"
     frontmatter_delimiter: ["---", "---"]
     slug: "{{slug}}"
     fields:
