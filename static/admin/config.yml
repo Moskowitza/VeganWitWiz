@@ -16,8 +16,10 @@ collections:
       - { label: "Bio", name: "bio", widget: "markdown" }
   - name: "posts"
     label: "Posts"
+    description: "Blog Posts, tell me about the cheese steak"
     folder: "src/posts"
     create: true
+    delete: false
     slug: "{{slug}}"
     fields:
       - { label: "Slug", name: "slug", widget: "string" }
