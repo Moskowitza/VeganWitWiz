@@ -2,8 +2,7 @@ backend:
   name: github
   branch: master
   repo: Moskowitza/VeganWitWiz
-
-media_folder: static/img
+media_folder: src/images
 public_folder: /img
 collections:
   - name: "team"
@@ -20,6 +19,7 @@ collections:
     folder: "src/posts"
     create: true
     delete: false
+    format: "frontmatter"
     frontmatter_delimiter: ["---", "---"]
     slug: "{{slug}}"
     fields:
