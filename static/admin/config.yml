@@ -2,7 +2,6 @@ backend:
   name: github
   branch: master
   repo: Moskowitza/VeganWitWiz
-
 media_folder: src/images
 public_folder: /images
 collections:
