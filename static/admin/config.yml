@@ -19,8 +19,6 @@ collections:
     folder: "src/posts"
     create: true
     delete: false
-    format: "frontmatter"
-    frontmatter_delimiter: ["---", "---"]
     slug: "{{slug}}"
     fields:
       - { label: "Slug", name: "slug", widget: "string" }
