@@ -97,6 +97,7 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "handler", function() { return handler; });
 // For more info, check https://www.netlify.com/docs/functions/#javascript-lambda-functions
+// eslint-disable-next-line import/prefer-default-export
 function handler(event, context, callback) {
   console.log("queryStringParameters", event.queryStringParameters);
   callback(null, {
