@@ -79,6 +79,10 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify-cms`,
     {
+      resolve: `gatsby-plugin-create-client-paths`,
+      options: { prefixes: [`/app/*`] },
+    },
+    {
       resolve: `gatsby-plugin-netlify-functions`,
       options: {
         functionsSrc: `${__dirname}/functions`,
