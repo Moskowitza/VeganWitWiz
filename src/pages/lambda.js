@@ -1,11 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
+
+import NavBar from "../components/NavBar"
 
 import Layout from "../components/layout"
-import Listing from "../components/listing"
-
-import SEO from "../components/seo"
 
 const lambda = ({ location }) => {
   fetch("/.netlify/functions/hello")
@@ -13,6 +10,7 @@ const lambda = ({ location }) => {
     .then(console.log)
   return (
     <Layout location={location}>
+      <NavBar />
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
     </Layout>
   )
