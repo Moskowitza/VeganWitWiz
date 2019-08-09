@@ -1,4 +1,19 @@
+const proxy = require("http-proxy-middleware")
+
 module.exports = {
+  // for avoiding CORS while developing Netlify Functions locally
+  // read more: https://www.gatsbyjs.org/docs/api-proxy/#advanced-proxying
+  developMiddleware: app => {
+    app.use(
+      "/.netlify/functions/",
+      proxy({
+        target: "http://localhost:9000",
+        pathRewrite: {
+          "/.netlify/functions/": "",
+        },
+      })
+    )
+  },
   siteMetadata: {
     title: `Vegan With Wiz`,
     description: `Thoughtful reviews of vegan cheese steaks`,
@@ -46,8 +61,8 @@ module.exports = {
         name: `Vegan Wit Wiz`,
         short_name: `witwiz`,
         start_url: `/`,
-        background_color: `#f2c6c2`,
-        theme_color: `#f2c6c2`,
+        background_color: `#fff`,
+        theme_color: `#fff`,
         display: `minimal-ui`,
         icon: `src/images/vww-icon.png`, // This path is relative to the root of the site.
       },
@@ -61,8 +76,15 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-offline`,
+    `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-netlify-functions`,
+      options: {
+        functionsSrc: `${__dirname}/functions`,
+        functionsOutput: `${__dirname}/lambdaFunctions`,
+      },
+    },
     `gatsby-plugin-netlify`, // ! netlify goes LAST!!!
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
