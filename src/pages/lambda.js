@@ -1,11 +1,11 @@
 import React from "react"
-
+import axios from "axios"
 import NavBar from "../components/NavBar"
 
 import Layout from "../components/layout"
 
 const lambda = ({ location }) => {
-  fetch("/.netlify/functions/hello")
+  axios("/.netlify/functions/hello")
     .then(response => response.json())
     .then(console.log)
   return (
